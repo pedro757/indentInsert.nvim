@@ -1,4 +1,6 @@
-return function()
+local M = {}
+
+function M.indentInsert()
   local lineChars = vim.fn.getline('.')
   if lineChars:gsub("%s+", ""):len() == 0 then
     return '"_cc'
@@ -7,3 +9,5 @@ return function()
   end
 
 end
+
+return M
