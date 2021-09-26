@@ -16,6 +16,9 @@ Plug 'pedro757/indentInsert'
 In your **init.lua:**
 
 ```lua
-Hola = require'indentInsert'.indentInsert
-vim.api.nvim_set_keymap('n', 'i', 'v:lua.Hola()', {expr = true})
+Indent = require'indentInsert'.indent
+-- Insert mode
+vim.api.nvim_set_keymap('n', 'i', 'v:lua.Indent('i')', {expr = true})
+-- Append mode
+vim.api.nvim_set_keymap('n', 'a', 'v:lua.Indent("a")', {expr = true})
 ```
